@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hostel Booking</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="frame">
+  <h1 class="frame-title">Hostel Booking</h1>
+
+  
+  <form class="box search" id="searchForm">
+    <h2 class="band">Search Rooms</h2>
+    <div class="search-row">
+      <select class="field" aria-label="Room Type">
+        <option>Room Type</option>
+        <option>Shared</option>
+        <option>Single</option>
+      </select>
+
+      <div class="price">
+        <div class="field pbox">
+          <span>Price Range:</span>
+          <input type="number" min="0" placeholder="Min" aria-label="Minimum price">
+        </div>
+        <span class="dot" aria-hidden="true">&middot;</span>
+        <div class="field pbox">
+          <input type="number" min="0" placeholder="Max" aria-label="Maximum price">
+        </div>
+      </div>
+
+      <select class="field" aria-label="Gender Preference">
+        <option>Gender Preference</option>
+        <option>Female</option>
+        <option>Male</option>
+      </select>
+
+      <button type="submit" class="btn">Search</button>
+    </div>
+  </form>
+
+  <div class="cols">
+
+    
+    <section class="box listings" aria-labelledby="listTitle">
+      <h2 class="band" id="listTitle">Room Listings</h2>
+      <div class="rooms">
+        <article class="room" data-room="Room 1">
+          <div class="img">Room One</div>
+          <div class="details">
+            <h3>Room Details</h3>
+            <ul>
+              <li>Capacity:50 Beds</li>
+              <li>Price: $3500 per Month</li>
+              <li>Availability: Vacant</li>
+            </ul>
+          </div>
+          <button type="button" class="btn book">Book Now</button>
+        </article>
+
+        <article class="room" data-room="Room 2">
+          <div class="img">Room Two</div>
+          <div class="details">
+            <h3>Room Details</h3>
+            <ul>
+              <li>Capacity:50 Beds</li>
+              <li>Price: $3500 per Month</li>
+              <li>Availability: Vacant</li>
+            </ul>
+          </div>
+          <button type="button" class="btn book">Book Now</button>
+        </article>
+
+        <article class="room" data-room="Room 3">
+          <div class="img">Room Three</div>
+          <div class="details">
+            <h3>Room Details</h3>
+            <ul>
+              <li>Capacity:50 Beds</li>
+              <li>Price: $3500 per Month</li>
+              <li>Availability: Vacant</li>
+            </ul>
+          </div>
+          <button type="button" class="btn book">Book Now</button>
+        </article>
+
+        <article class="room" data-room="Room 4">
+          <div class="img">Room Four</div>
+          <div class="details">
+            <h3>Room Details</h3>
+            <ul>
+              <li>Capacity:50 Beds</li>
+              <li>Price: $3500 per Month</li>
+              <li>Availability: Vacant</li>
+            </ul>
+          </div>
+          <button type="button" class="btn book">Book Now</button>
+        </article>
+      </div>
+
+      
+      <div class="popup" id="popup" role="dialog" aria-labelledby="okTitle">
+        <div class="ok-icon" aria-hidden="true">
+          <span class="rule"></span><span class="circle">&#10003;</span><span class="rule"></span>
+        </div>
+        <h2 id="okTitle">Booking Successful!</h2>
+        <p>Booking ID: ########</p>
+        <p>Receipt: <a href="#" class="rc">View</a> / <a href="#" class="rc">Download</a></p>
+        <button type="button" class="btn" id="backBtn">Back to Dashboard</button>
+      </div>
+    </section>
+
+    
+    <section class="box summary" aria-labelledby="sumTitle">
+      <h2 class="band" id="sumTitle">Booking Summary</h2>
+      <div class="sum-body">
+        <p class="line" id="sumName">Room Name</p>
+        <p class="line">Type: Shared / Single</p>
+        <p class="line">Price: $3500 per Month</p>
+        <p class="line">Duration: Select Dates</p>
+
+        <div class="date-row">
+          <label for="checkIn" class="field lbl">Check In Date</label>
+          <input type="date" id="checkIn" class="field">
+        </div>
+        <div class="date-row">
+          <label for="checkOut" class="field lbl">Check Out Date</label>
+          <input type="date" id="checkOut" class="field">
+        </div>
+
+        <p class="error" id="error" role="alert" hidden></p>
+        <button type="button" class="btn" id="confirmBtn">Confirm Booking</button>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

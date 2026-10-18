@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<main class="frame">
+  <header class="head">
+    <h1 class="frame-title">Student Dashboard </h1>
+    <nav class="toplinks" aria-label="Account">
+      <a href="#" class="stub">Notifications</a>
+      <span aria-hidden="true">|</span>
+      <a href="#" class="stub">My Profile</a>
+      <span aria-hidden="true">|</span>
+      <a href="#" class="stub">Log Out</a>
+    </nav>
+  </header>
+
+  <div class="dash">
+
+    
+    <aside class="side">
+      <div class="welcome">Welcome,<br>Wanderi Sam</div>
+      <nav class="menu" aria-label="Main menu">
+        <a href="dashboard.html" class="btn active" aria-current="page">Dashboard</a>
+        <a href="index.html" class="btn">Book a Room</a>
+        <a href="#" class="btn stub">My Bookings</a>
+        <a href="#" class="btn stub">Payments</a>
+        <a href="#" class="btn stub">Support</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+
+      <section class="box p-current" aria-labelledby="t1">
+        <h2 class="band" id="t1">Current Booking</h2>
+        <div class="body">
+          <p class="line" id="curRoom">Room: [Room One</p>
+          <p class="line" id="curStatus">Status: [Occupied / Pending | Expired]</p>
+        </div>
+      </section>
+
+      <section class="box p-pay" aria-labelledby="t2">
+        <h2 class="band" id="t2">Payment Due</h2>
+        <div class="body">
+          <p class="line">Amount Due: $3500</p>
+          <button type="button" class="btn stub">Pay Now</button>
+        </div>
+      </section>
+
+      <section class="box p-notif" aria-labelledby="t3">
+        <h2 class="band" id="t3">Notifications</h2>
+        <div class="body">
+          <p class="line">2 New Messages</p>
+          <button type="button" class="btn stub">View</button>
+        </div>
+      </section>
+
+      <section class="box p-quick" aria-labelledby="t4">
+        <h2 class="band" id="t4">Quick Actions</h2>
+        <div class="body quick">
+          <a href="index.html" class="tile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V8"/><path d="M3 14h18v6"/><path d="M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.5"/></svg>
+            Book a Room
+          </a>
+          <a href="#" class="tile stub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4M8 14h2M14 14h2M8 18h2M14 18h2"/></svg>
+            View Bookings
+          </a>
+          <a href="#" class="tile stub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M15 9.5C14.5 8.5 13.4 8 12 8c-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg>
+            Make Payment
+          </a>
+        </div>
+      </section>
+
+      <section class="box p-events" aria-labelledby="t5">
+        <h2 class="band" id="t5">Upcoming Events</h2>
+        <div class="body">
+          <p class="line">Hostel Meeting</p>
+          <p class="line">October 15, 2026</p>
+          <p class="line">Maintenance Notice</p>
+          <p class="line">October 20, 2026</p>
+        </div>
+      </section>
+
+      <section class="box p-history" aria-labelledby="t6">
+        <h2 class="band" id="t6">Booking &amp; Payment History</h2>
+        <div class="body">
+          <div class="tablewrap">
+            <table>
+              <caption class="sr">Booking and payment history</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Booking ID</th>
+                  <th scope="col">Room</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>101</td><td>[Room Name]</td><td>Confirmed</td><td>$3500</td></tr>
+                <tr><td>102</td><td>[Room Name]</td><td>Pending</td><td>$3500</td></tr>
+                <tr><td>103</td><td>[Room Name]</td><td>Paid</td><td>$3500</td></tr>
+                <tr class="extra" hidden><td>#####</td><td>[Room Name]</td><td>Paid</td><td>$3500</td></tr>
+                <tr class="extra" hidden><td>#####</td><td>[Room Name]</td><td>Confirmed</td><td>$3500</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="right"><button type="button" class="btn" id="moreBtn">View More</button></div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
